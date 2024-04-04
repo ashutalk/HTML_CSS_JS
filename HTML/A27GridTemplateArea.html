@@ -1,0 +1,80 @@
+<!-- 
+pehle grid boxes ko grid area ka naam dekar define karna hoga
+phir container me grid-template-rows aur grid-template-column dekar==> grid define karo
+phir template area define karo -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Grid Items Positioning</title>
+    <style type="text/css">
+        body{
+            font-family: arial,helvetica;
+        }
+        h1{
+            padding: 0 0 0 40px;
+        }
+        .container{
+            background-color: #eee;
+            width: 700px;
+            margin: 50px 0 0 50px;
+            height: auto;
+            display: grid;
+            grid-template-rows: 150px 150px 150px;/**/
+            grid-template-columns: repeat(3,1fr);
+            grid-template-areas: "item1 item1 item1 "
+                                 "item2 item2 item3"
+                                 "item4 item5 item5"; /**/
+            /* grid-gap: 20px; */
+        }
+
+        .items1{
+            background: orangered;
+            grid-area: item1;
+            /*grid-row-start: 2;
+            grid-row-end: 3;*/
+            /*grid-row: 2 / 3;*/
+            
+            /*grid-column-start: 3;
+            grid-column-end: 4;*/
+            /*grid-column: 3 / 4;*/
+
+           /* row-start/col-start/row-end/col-end */
+           /* grid-area: 2 / 3 / 3 / 4; */
+        }
+        .items2{
+            background: yellowgreen;
+            grid-area: item2;    /**/
+        }
+        .items3{
+            background: slateblue;
+            grid-area: item3;  /**/
+        }
+        .items4{
+            background: hotpink;
+            grid-area: item4;  /**/
+        }
+        .items5{
+            background: royalblue;
+            grid-area: item5;  /**/
+        }
+        .items6{
+            background: goldenrod;
+            grid-area: item6;  /**/
+        }
+        .items{ color: #fff;font-size: 20px;font-weight: bold;padding: 10px;  }
+    </style>
+</head>
+<body>
+    <h1>Yahoo Baba : CSS Grid Items Positioning</h1>
+
+    <div class="container">
+        <div class="items items1">First</div>
+        <div class="items items2">Second</div>
+        <div class="items items3">Third</div>
+        <div class="items items4">Fourth</div>
+        <div class="items items5">Fifth</div>
+        <div class="items items6">Sixth</div>
+    </div>
+</body>
+</html>

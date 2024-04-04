@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .flex-container{
+                        background: #eee;
+                        display: flex;
+/*flexbox container ke items boxes kaise align honge horizontal ya vertical==> Row | column  | row-reverse | column-reverse*/
+                       flex-direction:row; 
+/*ye wrop ka matlab reponsive layout ke liye kiya jaata hai,jab browser ko resize kiya jayega to flex items accordingly adjust ho jayenge*/
+                        flex-wrap:wrap;
+/* (horizontal alignment of  the flex items in flex container)*/
+                        justify-content:start;
+                        align-items:flex-start;
+                        }               
+                  
+                    .items{            /*common class for flex items */
+                        color: #fff;
+                        /* //align-self: flex-start; */
+                        font-size: 20px;
+                        font-weight: bold;
+                        text-align: center;
+                        padding:10px;
+                        margin:5px;
+                         }
+
+                            /*individual class for flex items */
+
+                        .item1{ background: orangered;}
+                        .item2{ background: yellowgreen;}
+                        .item3{ background: MEDIUMPURPLE;}
+                        .item4{ background: hotpink;}
+                        .item5{ background: royalblue}
+                        .item6{ background: orchid}
+                        .item7{ background: goldenrod}
+                        .item8{ background:#7DCEA0}
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <h1>CSS Flexbox</h1>
+
+    <div class="flex-container">
+      <div class="items item1">One</div>
+      <div class="items item2">Two</div>
+      <div class="items item3">Three</div>
+      <div class="items item4">Four</div>
+  
+      <div class="items item5">One</div>
+      <div class="items item6">Two</div>
+      <div class="items item7">Three</div>
+      <div class="items item8">Four</div>
+</body>
+</html>
